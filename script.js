@@ -11,11 +11,13 @@ entrar=document.getElementById("entrar");
 chequeo=document.getElementById("Consultar");
 retiro=document.getElementById("Retirar");
 depositos=document.getElementById("Depositar");
+salirse=document.getElementById("logout");
 
 entrar.addEventListener("click",iniciar);
 chequeo.addEventListener("click",consulta);
 retiro.addEventListener("click",retirar);
 depositos.addEventListener("click",depositar);
+salirse.addEventListener("click",salir);
 
 function iniciar(){
     var nombre = document.getElementById("nombre").value;
@@ -31,6 +33,7 @@ function iniciar(){
                 var mostrar = document.getElementById("Pantalla");
                 oculto.style.display = "none";
                 mostrar.style.display = "flex";
+                document.getElementById("nUsuario").innerHTML=(nombre1);
             }
             else{
                 alert("Contraseña Incorrecta");
@@ -40,7 +43,7 @@ function iniciar(){
     }
 }
 function consulta(){
-    alert("Tu saldo es "+saldo1);
+    document.getElementById("estatus").innerHTML=("Tu saldo es "+saldo1);
 }
 function retirar(){
     var saldot= saldo1;
@@ -49,7 +52,7 @@ function retirar(){
     if(saldot<10){
         return alert("Su saldo es menor a 10, retire menos");
     }
-    alert("Retiraste "+saldor);
+    document.getElementById("estatus").innerHTML=("Retiraste "+saldor);
     saldo1 = saldot;
 }
 function depositar(){
@@ -59,6 +62,12 @@ function depositar(){
     if(saldott>990){
         return alert("Su saldo es mayor a 990, deposite menos");
     }
-    alert("Depositaste "+saldod);
+    document.getElementById("estatus").innerHTML=("Depositaste "+saldod);
     saldo1 = saldott;
+}
+function salir(){
+    var oculto = document.getElementById("Login");
+    var mostrar = document.getElementById("Pantalla");
+    mostrar.style.display = "none";
+    oculto.style.display = "flex";
 }
