@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ATM</title>
+</head>
+<body>
+    <main id="principal">
+        <div id="Login">
+            <div class="margen" id="usuario">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text">
+            </div>
+            <div class="margen" id="contraseña">
+                <label for="contra">Contraseña</label>
+                <input id="contra" type="text">
+            </div>
+            <div class="margen" id="botones">
+                <button id="entrar">Entrar</button>
+                <button id="create">Crear</button>
+            </div>
+        </div>
+        <div id="Pantalla">
+            <div class="BOX">
+                <div class="dinero">
+                    <label for="dinerouser">Ingrese su monto</label>
+                    <input id="dinerouser" type="number">
+                </div>
+                <div class="opciones">
+                    <div class="opcion">
+                        <button id="Retirar">Retirar</button>
+                    </div>
+                    <div class="opcion">
+                        <button id="Consultar">Consultar</button>
+                    </div>
+                    <div class="opcion">
+                        <button id="Depositar">Depositar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

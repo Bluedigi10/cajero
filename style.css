@@ -1,0 +1,25 @@
+
+#principal{
+    height: 730px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Pantalla{
+    display: none;
+}
+#Login{
+    background-color: aqua;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 25px;
+}
+.margen{
+    margin: 10px;
+}
+#botones{
+    align-self: center;
+}
