@@ -1,20 +1,5 @@
-{
-    "Banco": "BANCOMEX",
-    "Cuentas":[
-        {
-            "usuario": "Mali",
-            "contraseña": "123",
-            "saldo": 200
-        },
-        {
-            "usuario": "Gera",
-            "contraseña": "124",
-            "saldo": 300
-        },
-        {
-            "usuario": "Maui",
-            "contraseña": "125",
-            "saldo": 90
-        }
-    ]
-}
+[
+    { "nombre": "Mali", "password": "123", "saldo": 200},
+    { "nombre": "Gera", "password": "124", "saldo": 300},
+    { "nombre": "Maui", "password": "125", "saldo": 90}
+]

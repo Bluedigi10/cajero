@@ -1,23 +1,39 @@
-var cuentas = [
-    { nombre: "Mali", password: "123", saldo: 200 },
-    { nombre: "Gera", password: "124", saldo: 290 },
-    { nombre: "Maui", password: "125", saldo: 67 }
-  ];
+var cuentas;
+
+//Lectura de json
+const request = new XMLHttpRequest();
+request.open('GET', './datos/cuentas.json', true);
+request.send();
+request.onreadystatechange = function(){
+    if(this.readyState==4 && this.status ==200){
+        cuentas = JSON.parse(this.responseText);
+        console.log(cuentas);
+    }
+}
+
 var nombre1="a";
 var contra1="0";
 var saldo1=0;
 
+crear=document.getElementById("create");
 entrar=document.getElementById("entrar");
 chequeo=document.getElementById("Consultar");
 retiro=document.getElementById("Retirar");
 depositos=document.getElementById("Depositar");
 salirse=document.getElementById("logout");
 
+crear.addEventListener("click",nuevacuenta);
 entrar.addEventListener("click",iniciar);
 chequeo.addEventListener("click",consulta);
 retiro.addEventListener("click",retirar);
 depositos.addEventListener("click",depositar);
 salirse.addEventListener("click",salir);
+
+
+
+function nuevacuenta(){
+    console.log(cuentas);
+}
 
 function iniciar(){
     var nombre = document.getElementById("nombre").value;
